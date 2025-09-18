@@ -15,6 +15,12 @@
 #define USB_VBUS_PIN C6
 #define SPLIT_HAND_PIN A0
 
+// user
+#define CHORDAL_HOLD
+#define FLOW_TAP_TERM 150
+#define RETRO_TAPPING
+#define RGBLIGHT_LAYERS
+
 /* Defines for the RGB matrix */
 #ifdef RGB_MATRIX_ENABLE
 #   define WS2812_PWM_DRIVER PWMD3
