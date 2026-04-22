@@ -13,20 +13,21 @@
 #define SERIAL_USART_PIN_SWAP
 
 #define USB_VBUS_PIN C6
-#define SPLIT_HAND_PIN A0
 
 // user
 #define CHORDAL_HOLD
 #define FLOW_TAP_TERM 150
 #define RETRO_TAPPING
-#define RGBLIGHT_LAYERS
+// sync rbg status to slave side
+#define SPLIT_LAYER_STATE_ENABLE
+// dangerous but responsive
+#define RGB_TRIGGER_ON_KEYDOWN
+#define RGB_MATRIX_SLEEP
 
 /* Defines for the RGB matrix */
-#ifdef RGB_MATRIX_ENABLE
-#   define WS2812_PWM_DRIVER PWMD3
-#   define WS2812_PWM_CHANNEL 4
-#   define WS2812_PWM_PAL_MODE 10
-#   define WS2812_DMA_STREAM STM32_DMA1_STREAM2
-#   define WS2812_DMA_CHANNEL 2
-#   define WS2812_DMAMUX_ID STM32_DMAMUX1_TIM3_UP
-#endif
+#define WS2812_PWM_DRIVER PWMD3
+#define WS2812_PWM_CHANNEL 4
+#define WS2812_PWM_PAL_MODE 10
+#define WS2812_DMA_STREAM STM32_DMA1_STREAM2
+#define WS2812_DMA_CHANNEL 2
+#define WS2812_DMAMUX_ID STM32_DMAMUX1_TIM3_UP
